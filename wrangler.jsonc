@@ -1,0 +1,59 @@
+{
+  "name": "rainbowsmokeofficial-com",
+  "main": "src/index.js",
+  "workers_dev": true,
+  "preview_urls": true,
+  "compatibility_date": "2024-07-10",
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_classes": [
+        "VisitCounter"
+      ]
+    }
+  ],
+  "observability": {
+    "enabled": false,
+    "head_sampling_rate": 1,
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1,
+      "persist": true,
+      "invocation_logs": true
+    },
+    "traces": {
+      "enabled": false,
+      "persist": true,
+      "head_sampling_rate": 1
+    }
+  },
+  "ai": {
+    "binding": "AI"
+  },
+  "r2_buckets": [
+    {
+      "binding": "MEDIA_BUCKET",
+      "bucket_name": "rainbow-media"
+    }
+  ],
+  "d1_databases": [
+    {
+      "binding": "RAINBOW_DB",
+      "database_id": "ece48f04-b9e9-432b-9326-a92466c80bfd"
+    }
+  ],
+  "kv_namespaces": [
+    {
+      "id": "a05f6b33421c49ce8266b363a7ed10ec",
+      "binding": "SESSION_KV"
+    }
+  ],
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "VisitCounter",
+        "class_name": "VisitCounter"
+      }
+    ]
+  }
+}
