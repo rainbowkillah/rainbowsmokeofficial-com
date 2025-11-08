@@ -54,7 +54,9 @@ jspm_packages/
 
 # Node_modules directory
 
+node_modules
 node_modules/*
+
 
 # Snowpack dependency directory (https://snowpack.dev/)
 
